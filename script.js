@@ -1,3 +1,5 @@
+/*https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm*/
+
 document.querySelector('.mybutton')
     .addEventListener('click', function() {
         let initialTime = performance.now();
