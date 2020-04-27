@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang=en-us>
+    <head>
+    <meta charset=utf-8>
+        <meta content="text/html; charset=utf-8"http-equiv=Content-Type>
+        <title>Emscripten-Generated Code</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+       <h1>
+        <span>W</span>
+        <span>A</span>
+        <span>S</span>
+        <span>M</span>
+        <span>V</span>
+        <span>/</span>
+        <span>S</span>
+        <span>J</span>
+        <span>S</span>
+       </h1>
+       <div class="container">
+        <div class="first">
+            <div class="box">
+                <div class="glasses"></div>
+                <div class="content">
+                    <h2>WASM</h2>
+                    <h6>Test 1</h6>
+                    <button id="button1" class="mybutton">Run Wasm</button>
+                    <div id="wasm1" ></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="glasses"></div>
+                <div class="content">
+                    <h2>JAVASCRIPT</h2>
+                    <h6>Test 1</h6>
+                    <button id="button2" type="button" onclick="run1()">Run Js</button>
+                </br>
+                    <div id="jsoutput1"></div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="box">
+                <div class="glasses"></div>
+                <div class="content">
+                    <h2>WASM</h2>
+                    <h6>Test 2</h6>
+                    <button id="button2" type="mybutton2" class="mybutton2">Run WASM</button>
+                </br>
+                <div id="wasm2" ></div>
+                    
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="glasses"></div>
+                <div class="content">
+                    <h2>JAVASCRIPT</h2>
+                    <h6>Test 2</h6>
+                    <button id="button2" type="button" onclick="run2()">Run Js</button>
+                </br>
+                <div id="jsoutput2"></div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="box">
+                <div class="glasses"></div>
+                <div class="content">
+                    <h2>WASM</h2>
+                    <h6>Test 3</h6>
+                    <button id="button2" type="mybutton3" class="mybutton3">Run WASM</button>
+                </br>
+                <div id="wasm3" ></div>
+                    
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="glasses"></div>
+                <div class="content">
+                    <h2>JAVASCRIPT</h2>
+                    <h6>Test 3</h6>
+                    <button id="button2" type="button" onclick="run3()">Run Js</button>
+                </br>
+                <div id="jsoutput3"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script async src="subset.js"></script>
+<script type='text/javascript' src="algoritmo.js"></script> 
+<script type='text/javascript' src="algoritmo2.js"></script> 
+<script type='text/javascript' src="algoritmo3.js"></script> 
+<script src="script.js"></script>
+</body>
+</html>
+
+<!--
+/emsdk
+
+
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
+
+
+
+emcc -o subset.html subset.c -O3 -s WASM=1 --shell-file shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
+
+-->

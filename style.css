@@ -1,0 +1,230 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: block;
+}
+
+.first{
+    display: inline-block;
+}
+
+.second{
+    display: inline-block;
+}
+
+.third{
+    display: inline-block;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background: #010615;
+}
+
+/* card https://www.youtube.com/watch?v=LYWLE45byXc*/
+
+.box{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    margin: 40px;
+}
+
+.box:before
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.box:after
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after
+{
+    background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3):after
+{
+    background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+
+.box .glasses {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    background: rgb(255,255,255, .1);
+    pointer-events: none;
+}
+
+.box .content{
+    padding: 20px;
+    color: #fff;
+}
+
+/* button https://www.youtube.com/watch?v=3RRgVHd2TXQ*/
+#button1{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+
+#button1:hover
+{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+#button2{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+
+#button2:hover
+{
+    background: #d0f403;
+    color: #050801;
+    box-shadow: 0 0 5px  #fbff00,
+                0 0 25px  #fbff00,
+                0 0 50px #fbff00,
+                0 0 200px  #fbff00;
+}
+
+/* https://www.youtube.com/watch?v=1B3FgFXn274 */
+
+h1{
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size:12em ;
+}
+
+h1 span
+{
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite;
+}
+
+h1 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+
+h1 span:nth-child(2)
+{
+    animation-delay: 0.25s;
+}
+
+h1 span:nth-child(3)
+{
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-child(4)
+{
+    animation-delay: 0.75s;
+}
+
+h1 span:nth-child(5)
+{
+    animation-delay: 1s;
+}
+
+h1 span:nth-child(6)
+{
+    animation-delay: 1.25s;
+}
+
+h1 span:nth-child(7)
+{
+    animation-delay: 1.5s;
+}
+
+h1 span:nth-child(8)
+{
+    animation-delay: 1.75s;
+}
+
+h1 span:nth-child(9)
+{
+    animation-delay: 2s;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 200px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+    }
+    5%,95%
+    {
+        color: #fff;
+        filter: blur(0px);
+        text-shadow:  none;
+    }
+}
